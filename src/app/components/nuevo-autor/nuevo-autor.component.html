@@ -1,0 +1,20 @@
+
+<h1>Ingresa tu autor favorito</h1>
+<div>
+  <a [routerLink]="['/home']">Ir al Listado</a>
+
+  <label>Agrega un nuevo autor:</label>
+</div>
+
+<form (submit)="onSubmit()">
+  <div>
+    <label>Nombre:</label>
+    <input type="text" name="nombreAutor" id="nombre" [(ngModel)]="nuevoAutor.nombreAutor" required>
+  </div>
+  <div>
+    <button [routerLink]="['/home']">Cancel</button>
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+<div>{{mensajeError}}</div>
+
